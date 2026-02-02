@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ca-blue-900: hsl(209, 23%, 22%);
+  --color-ca-blue-950: hsl(207, 26%, 17%);
+  --color-ca-grey-950: hsl(200, 15%, 8%);
+  --color-ca-grey-400: hsl(0, 0%, 50%);
+  --color-ca-grey-50: hsl(0, 0%, 99%);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300; /* 600, 800*/
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+  font-size: 1.15rem;
+}
+
+main {
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+}
+
+main.dark {
+  background-color: hsl(208, 26%, 11%);
+  color: white;
+}
+
+main.light {
+  background-color: hsl(0, 0%, 99%);
+  color: hsl(200, 15%, 8%);
+}
+
+.dark .bg-element {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.light .bg-element {
+  background-color: white;
+  box-shadow: 0px 1px 10px 1px hsla(209, 26%, 17%, 0.2);
+}
+
+.dark input::placeholder {
+  color: white;
+}
+
+.light input::placeholder {
+  color: hsl(200, 15%, 8%);
+}
+
+.light .loading-state span {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.dark .loading-state span {
+  background-color: white;
+}
+
+.rounded-element {
+  border-radius: 10px;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.icon-sm {
+  width: 0.75rem;
+}
+
+.light .icon path,
+.light .icon-sm path {
+  fill: hsl(209, 23%, 22%) !important;
+}
+
+.dark .icon path,
+.dark .icon-sm path {
+  fill: white !important;
+}
