@@ -5,7 +5,7 @@ import CountryPage from "./components/countries/CountryPage.vue";
 import NotFound from "./components/layout/NotFound.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/countries-app/"),
   routes: [
     {
       path: "/",
@@ -16,23 +16,19 @@ const router = createRouter({
       },
     },
     {
-      path: "/:code",
-      name: "country",
-      props: true,
-      components: {
-        default: CountryPage,
-      },
-    },
-    {
-      path: "/:notFound(.*)",
-      redirect: "/error",
-    },
-    {
       path: "/error",
       name: "error",
       components: {
         "home-search-controls": HomeSearchControls,
         default: NotFound,
+      },
+    },
+    {
+      path: "/:code",
+      name: "country",
+      props: true,
+      components: {
+        default: CountryPage,
       },
     },
   ],

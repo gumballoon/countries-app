@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import svgLoader from "vite-svg-loader";
 
 export default defineConfig({
+  base: "/countries-app/",
   plugins: [vue(), tailwindcss(), svgLoader()],
   server: {
     watch: {

@@ -74,7 +74,6 @@ import { useStore } from "vuex";
 const store = useStore();
 import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
-const route = useRoute();
 
 const props = defineProps(["code"]);
 const isLoading = ref("false");
