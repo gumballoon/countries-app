@@ -1,9 +1,9 @@
 <template>
   <header class="bg-element px-6 py-10 flex justify-between items-center">
-    <router-link to="/">
-      <span class="text-[1.5rem] font-bold hover:cursor-pointer"
-        >Where in the world?</span
-      >
+    <router-link to="/" @click="resetFilter">
+      <h1 class="text-[1.5rem] font-bold hover:cursor-pointer">
+        Where in the world?
+      </h1>
     </router-link>
     <div class="flex items-center cursor-pointer" @click="toggleMode">
       <IconDarkMode v-if="mode === 'light'" class="icon" />
@@ -32,5 +32,8 @@ const switchToMode = computed(() => {
 });
 function toggleMode() {
   store.dispatch("toggleMode");
+}
+function resetFilter() {
+  store.dispatch("resetFilter");
 }
 </script>
