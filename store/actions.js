@@ -42,6 +42,8 @@ const actions = {
     const mode = localStorage.getItem("mode");
     if (mode) {
       context.commit("setMode", { mode });
+    } else {
+      context.commit("setMode", { mode: "dark" });
     }
   },
 };

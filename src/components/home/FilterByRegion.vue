@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative w-max" v-click-outside="closeDropdown">
     <div
       class="flex items-center justify-between bg-element rounded-element px-8 py-6 w-80 hover:cursor-pointer"
       @click="toggleDropdown"
@@ -58,6 +58,9 @@ const store = useStore();
 const isDropdownVisible = ref(false);
 function toggleDropdown() {
   isDropdownVisible.value = !isDropdownVisible.value;
+}
+function closeDropdown() {
+  isDropdownVisible.value = false;
 }
 
 const selectedRegion = ref(route.query.region);
